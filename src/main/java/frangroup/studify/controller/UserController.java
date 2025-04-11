@@ -32,6 +32,11 @@ public class UserController {
         return this.userService.findById(id);
     }
 
+    @GetMapping("/{userEmail}")
+    public User findByEmail(@PathVariable("userEmail") String email) {
+        return this.userService.findByEmail(email);
+    }
+
     @DeleteMapping("/{userId}")
     public void delete(@PathVariable("userId") Integer id) {
         this.userService.delete(id);
