@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+<h1>Ingresa tus datos</h1>
+
+<!-- Formulario que envía datos a /procesar-formulario -->
+<form action="#" th:action="@{create}" method="post">
+    <label for="title">Titulo:</label>
+    <input type="text" id="title" name="title" required>
+    <br>
+
+    <label for="description">Descripcion:</label>
+    <input type="text" id="description" name="description" required>
+    <br>
+
+    <button type="submit">Enviar</button>
+</form>
+</body>
+</html>
