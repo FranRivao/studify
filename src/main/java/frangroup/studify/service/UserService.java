@@ -17,7 +17,9 @@ public class UserService {
     }
 
     public User saveOrUpdate(User user) {
-        return this.userRepository.save(user);
+        if (this.findByEmail(user.getEmail()) == null) {
+            return this.userRepository.save(user);
+        } else return null;
     }
 
     public List<User> findAll() {
@@ -26,6 +28,10 @@ public class UserService {
 
     public User findById(Integer id) {
         return this.userRepository.findById(id).orElse(null);
+    }
+
+    public User findByEmail(String email) {
+        return this.userRepository.findByEmail(email).orElse(null);
     }
 
     public void delete(Integer id) {
