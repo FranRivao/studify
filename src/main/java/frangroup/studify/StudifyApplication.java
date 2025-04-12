@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class StudifyApplication {
+	public final static String route = "api/v1/";
 
 	public static void main(String[] args) {
 		SpringApplication.run(StudifyApplication.class, args);
 	}
-
 }
