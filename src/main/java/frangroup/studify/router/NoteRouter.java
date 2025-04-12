@@ -1,5 +1,6 @@
 package frangroup.studify.router;
 
+import frangroup.studify.StudifyApplication;
 import frangroup.studify.entity.Note;
 import frangroup.studify.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/notes")
+@RequestMapping(path = StudifyApplication.route + "notes")
 public class NoteRouter {
     @Autowired
     private final NoteService noteService;

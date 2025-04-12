@@ -1,5 +1,6 @@
 package frangroup.studify.router;
 
+import frangroup.studify.StudifyApplication;
 import frangroup.studify.entity.User;
 import frangroup.studify.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "api/v1/users")
+@RequestMapping(path = StudifyApplication.route + "users")
 public class UserRouter {
     @Autowired
     private final UserService userService;
