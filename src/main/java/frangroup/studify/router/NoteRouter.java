@@ -1,4 +1,4 @@
-package frangroup.studify.controller;
+package frangroup.studify.router;
 
 import frangroup.studify.entity.Note;
 import frangroup.studify.service.NoteService;
@@ -9,11 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/notes")
-public class NoteController {
+public class NoteRouter {
     @Autowired
     private final NoteService noteService;
 
-    public NoteController(NoteService noteService) {
+    public NoteRouter(NoteService noteService) {
         this.noteService = noteService;
     }
 

@@ -1,4 +1,4 @@
-package frangroup.studify.controller;
+package frangroup.studify.router;
 
 import frangroup.studify.entity.User;
 import frangroup.studify.service.UserService;
@@ -9,11 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/users")
-public class UserController {
+public class UserRouter {
     @Autowired
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    public UserRouter(UserService userService) {
         this.userService = userService;
     }
 
