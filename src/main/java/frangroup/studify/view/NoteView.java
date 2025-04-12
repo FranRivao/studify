@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class NoteView {
     @Autowired
     private final NoteService noteService;
+    private final String DIRECTORY = "note/";
 
     public NoteView(NoteService noteService) {
         this.noteService = noteService;
@@ -22,7 +23,7 @@ public class NoteView {
 
     @GetMapping("create")
     public String showCreate() {
-        return "index";
+        return DIRECTORY + "index";
     }
 
     @PostMapping("create")
@@ -31,6 +32,6 @@ public class NoteView {
         model.addAttribute("description", description);
 
         this.noteService.saveOrUpdate(Note.builder().title(title).description(description).build());
-        return "resultado";
+        return DIRECTORY + "resultado";
     }
 }
